@@ -1,4 +1,6 @@
 # dotfiles
+![example workflow](https://github.com/PotassiumPermanganate/dotfiles/actions/workflows/main.yml/badge.svg)
+
 
 Run:
 ```
