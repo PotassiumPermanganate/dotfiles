@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Check for build
         id: build
-        uses: actions/build@v1
+        uses: actions/dotfiles@v1
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.build.outputs.time }}"
