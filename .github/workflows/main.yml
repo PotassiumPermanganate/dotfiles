@@ -22,9 +22,8 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
       - name: Check for build
+        uses: ./ # Uses an action in the root directory
         id: build
       # Use the output from the `hello` step
       - name: Get the output time
