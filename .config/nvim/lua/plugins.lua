@@ -16,29 +16,39 @@ vim.cmd([[
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  use 'dracula/vim'
-  use 'ryanoasis/vim-devicons'
-  use 'tpope/vim-repeat'
-  use 'tpope/vim-surround'
-  use 'tpope/vim-unimpaired'
+    use 'dracula/vim'
+    use 'ryanoasis/vim-devicons'
+    use 'tpope/vim-repeat'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-unimpaired'
 
-  -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+    -- Treesitter
+    use { 'nvim-treesitter/nvim-treesitter' }
+    use { 'nvim-treesitter/nvim-treesitter-textobjects' }
 
-  -- Telescope
-  use 'nvim-lua/plenary.nvim'
-  use {
-      'nvim-telescope/telescope.nvim',
-      requires = { 'nvim-lua/plenary.nvim' }
-  }
-  use {
-      'nvim-telescope/telescope-file-browser.nvim',
-      requires = { 'nvim-telescope/telescope.nvim' }
-  }
+    -- Telescope
+    use 'nvim-lua/plenary.nvim'
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
+    use {
+        'nvim-telescope/telescope-file-browser.nvim',
+        requires = { 'nvim-telescope/telescope.nvim' }
+    }
 
+    -- LSP stuff
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/nvim-lsp-installer'
 
+    -- show key mappings
+    use 'folke/which-key.nvim'
+
+    use { 'windwp/nvim-autopairs', requires = { 'hrsh7th/nvim-cmp' } }
+
+    -- comment out code
+    use 'numToStr/Comment.nvim'
 end)
