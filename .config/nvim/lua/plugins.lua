@@ -51,4 +51,20 @@ return require('packer').startup(function()
 
     -- comment out code
     use 'numToStr/Comment.nvim'
+
+    -- Auto completion stuff
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = { 'L3MON4D3/LuaSnip' }
+    }
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-nvim-lua'
+    use {
+        'onsails/lspkind.nvim',
+        requires = 'hrsh7th/nvim-cmp'
+    } -- icons for nvim-cmp
+
 end)
